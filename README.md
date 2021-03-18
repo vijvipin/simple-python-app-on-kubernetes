@@ -25,6 +25,8 @@ Before jumping into Kubernetes, let’s verify it works in Docker. Run the follo
 docker run -p 5001:5000 hello-python
 ```
 
+#### This launch application on : http://localhost:5001/
+
 Now lets jump to kubernetes. 
 
 Go to folder /kubernetes. Here we have deployment.yaml
@@ -33,3 +35,14 @@ Go to folder /kubernetes. Here we have deployment.yaml
 kubectl apply -f deployment.yaml
 ```
 
+## Getting the localhost. Checl the services which are launched.
+```
+kubectl get all
+```
+
+![image](https://user-images.githubusercontent.com/45314106/111697444-dd289280-8835-11eb-909d-cd5a5ee7103e.png)
+
+
+In the image above we see that service is launched at port 31709. So run the following link to run python app on kubenetes.
+
+http://localhost:31709/
